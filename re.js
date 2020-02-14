@@ -1,9 +1,15 @@
 #!/usr/bin/env node
-
 const { exec } = require("child_process");
 
+var targetSite = '*';
+var args  = process.argv;
+
+if(args[2]){
+    targetSite = args[2];
+}
+
 //Disable the target site config(s)
-exec(`sudo a2dissite * && sudo systemctl reload apache2 && sudo a2ensite * && systemctl reload apache2`, {cwd: '/etc/apache2/sites-available'}, (error, stdout, stderr) => {
+exec(`sudo a2dissite ${targetSite} && sudo systemctl reload apache2 && sudo a2ensite ${targetSite} && systemctl reload apache2`, {cwd: '/etc/apache2/sites-available'}, (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
