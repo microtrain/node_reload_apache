@@ -1,5 +1,19 @@
 {
-    "scripts": {
-        "start": "sudo node re.js"
-    }
+  "scripts": {
+    "start": "sudo node re.js"
+  },
+  "name": "node_reload_apache",
+  "description": "A NodeJS application for reloading Apache virtual hosts.",
+  "version": "0.0.1",
+  "main": "re.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microtrain/node_reload_apache.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/microtrain/node_reload_apache/issues"
+  },
+  "homepage": "https://github.com/microtrain/node_reload_apache#readme"
 }
